@@ -1,0 +1,315 @@
+*{
+margin: 0; padding: 0;
+box-sizing: border-box;
+font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.mainheader{
+    background-color: rgba(0,0,0,0.4);
+ width: 100%;
+    padding-bottom: 70px;
+ height: 100px;   
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.mainheader .logo img{
+    margin-top:160px;
+ width: 250px; height: 150px;
+ padding-left: 60px;
+}
+
+.mainheader nav{
+    margin-top: 70px; 
+ width: 300px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.mainheader nav a{
+ text-decoration: none;
+ color: antiquewhite;
+ text-transform: uppercase;
+}
+
+.mainheader nav a:hover{
+color:orange;
+}
+
+.loginbtn{
+ margin-top: 70px;
+ margin-right: 60px;
+}
+
+ a{
+ text-decoration: none;
+ color: antiquewhite;  
+}
+
+main{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+#button{
+     padding: 15px 45px;
+ text-align: center;
+ font-size: 16px;
+ border: none;
+ background-color: rgb(49, 97, 255);
+ border-radius: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #00baff;
+}
+
+main .left-sec{
+ padding-left: 100px;
+}
+
+.left-sec h2{
+ font-size: 20px;
+ text-transform: capitalize;
+ font-weight: lighter;
+ color: #ffffff;
+ margin-top: 170px;
+}
+
+.left-sec h1{
+ font-size: 55px;
+    color: aliceblue;
+ text-transform: capitalize;
+ font-weight: 700;
+ margin: 15px 0;
+}
+
+.left-sec p{
+    margin-right: 50%;
+    color: #fafafa;
+ margin-bottom: 20px;
+}
+
+footer {
+    position: fixed;
+  bottom: 0;
+  height:30px;
+  width: 100%;
+    padding: 8px 20px;   
+    background-color: #4646467a;
+    text-align: center;
+    color:#a7a7a7;
+}
+
+
+.modal {
+    background-image: url(/static/Images/bodycult3.png);
+    background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right:15px;
+	font-size: 55px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+
+}
+.close a{
+color:black;
+}
+
+.modal1-contents {
+    margin-top:60px;
+  border: 1.5px solid white;
+	height: 380px;
+	width: 500px;
+	background-color: rgba(255, 156, 21, 0.79);
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 20px;
+}
+
+.modal1-contents a{
+    top:30px;
+}
+
+.Login_logo {
+    border:3px solid;
+    border-color:white ;
+     border-radius: 50%;
+   margin:-80px 0 20px 0 ;
+   width:150px;
+}
+/* 
+input {
+	margin: 15px auto 20px;
+	display: block;
+	width: 50%;
+	padding: 8px;
+	border: 1px solid gray;
+} */
+
+ .inputBox
+{
+    margin: 0 50px 0 50px;
+    position:relative;
+    
+}
+ .inputBox input
+{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+    color:#fff;
+    letter-spacing:1px;
+    margin-bottom:30px;
+    border:none;
+    border-bottom:1px solid #fff;
+    outline:none;
+    background:transparent;
+}
+
+.inputBox label
+{
+    position:absolute;
+    top:0;
+    left:0;
+    padding:10px 0;
+    font-size:16px;
+    color:#fff;
+    pointer-events: none;
+    transition: .5s;       
+}
+.inputBox input:focus ~ label,
+.inputBox input:valid ~label
+{
+    top:-20px;
+    left:0;
+    color:#000000;
+    font-size:12px;
+}
+
+#inputBox
+{
+     display:flex; 
+    color:antiquewhite;
+}
+
+.modal2-contents {
+    margin-top:60px;
+  border: 2px solid white;
+	height: 500px;
+	width: 750px;
+	background-color: rgba(255, 156, 21, 0.79);
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 20px;
+}
+
+.leftform {
+    margin:0;
+    float:left;
+    width:50%;
+    padding:0;
+
+}
+
+.rightform {
+    margin:0;
+    padding:0;
+    float:right;
+    width:50%;
+}
+
+.modal2-contents #button{
+    margin-top: 40px;
+    width :300px;
+}
+.modal1-contents #button{
+    margin-top: 25px;
+    width :200px;
+}
+ 
+
+.form{
+    margin:0px;
+    margin-top:10px;
+}
+
+select{
+    appearance:none;
+    outline:none;
+    box-shadow:none;
+    background:rgba(255, 255, 255, 0.44);
+    border-radius: 1em; 
+    padding: 9px 40px 9px 60px;
+ text-align: center;
+ font-size: 15px;
+  transition: 0.3s;
+    margin:15px 0px -15px;
+}
+
+
+
+.bigcard {
+    margin-top:-25px;
+	height: 85vh;
+	width: 100hw;  
+    display:flex;
+    justify-content: center;
+}
+
+.card {
+    border: .8px solid white;
+    margin: 130px 30px 50px;
+	width: 300px;
+	background-color: rgba(234, 167, 76, 0.75);
+	text-align: center;
+	position: relative;
+	border-radius: 9px;
+}
+
+.card img{
+    margin-top:-60px;
+   
+}
+.card h3{
+    margin-top:7px;
+    color:#f8e12c;
+}
+
+#icons img{
+    margin:0.5px 0px 0px 30px;
+     height:40px;
+}
+
+#linkbox{
+    margin-top:10px;
+    display:flex;
+}
+
+#link p{
+    margin:5px 40px 12px 10px;
+    border: 1px solid;
+    border-radius:20px;
+    padding:7px 40px;   
+}

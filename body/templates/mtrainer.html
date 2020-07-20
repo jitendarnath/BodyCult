@@ -1,0 +1,58 @@
+{% extends 'MemberDash.html' %}
+{% block body %}
+<head>
+      <style>
+       table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin:10px 50px;
+          border:2px solid white;
+          border-radius:20px;
+          background: transparent;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+          
+        }
+        th{
+          color:orangered;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+          color:rgba(255, 153, 0, 0.897);
+        }
+        </style>
+</head><br>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Phone No.</th>
+    <th>Experience(years)</th>
+    <th>Skilled In</th>
+    
+  </tr>
+
+  {% for trainer in trainers %}
+ <tr>
+      <td>{{trainer.name}}</td>
+      <td>{{trainer.age}}</td>
+      <td>{{trainer.gender}}</td>
+      <td>{{trainer.phone}}</td>
+      <td>{{trainer.experience}}</td>
+      <td>{{trainer.skills}}</td>
+      
+  </tr>
+  {% endfor %}
+
+  
+</table>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'TrainerDash.html' %}
+{% block body %}
+<div class="box">
+        <form action="/tclass/" method="POST">
+            {%csrf_token%}
+            <label>Select class :</label>
+             <select name="name" required>
+                     <option value="1">Cardio</option>
+                     <option value="2">Body Building</option>
+                     <option value="3">HIIT</option>
+                     <option value="4">Calesthenics</option>
+                     <option value="5">Powerlifting</option>
+                     <option value="6">MMA</option>
+                     <option value="7">Yoga</option>
+                     <option value="8">Zumba</option>
+            </select><br><br>
+            <label>Date :</label>
+            <input type="date" name="date" required><br><br>
+            <label>Time :</label>
+            <input type="time" name="time" required><br><br>
+            <label>Duration :</label>
+            <input type="number" name="duration" required> Hrs <br><br>
+            
+           
+            <button type="submit">
+                    Create Class
+            </button>
+       </form>                    
+    </div>
+    
+
+{% endblock %}
+ <!-- <button type="submit">
+                    Edit Class
+            </button> -->

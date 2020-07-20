@@ -1,0 +1,61 @@
+{% extends 'TrainerDash.html' %}
+{% block body %}
+<head>
+        <style>
+       table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin:10px 50px;
+          border:2px solid white;
+          border-radius:20px;
+          background: transparent;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+          
+        }
+        th{
+          color:orangered;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+          color:rgba(255, 153, 0, 0.897);
+        }
+        </style>
+</head>
+<br>
+
+<table>
+  <tr>
+    <th>Class</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Phone No.</th>
+    <th>Height</th>
+    <th>Weight</th>
+    
+  </tr>
+
+  {% for member in members %}
+ <tr>
+    <td>{{member.name}}</td>
+      <td>{{member.member.name}}</td>
+      <td>{{member.member.age}}</td>
+      <td>{{member.member.gender}}</td>
+      <td>{{member.member.phone}}</td>
+      <td>{{member.member.height}}</td>
+      <td>{{member.member.weight}}</td>
+      
+  </tr>
+  {% endfor %}
+
+  
+</table>
+
+{% endblock %}

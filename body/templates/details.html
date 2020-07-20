@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+     <link rel="stylesheet" type="text/css" href="/static/Dashboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="modal" >
+        <div class="modal1-contents">
+         <div class="close"><a href="/mclass/">+</a></div>
+        <h3>             
+           Session: {{session.name}}<br><br>
+              Date: {{session.date}}<br><br>
+            Time: {{session.time}} <br><br>
+           Duration: {{session.duration}} hrs <br><br>
+           Trainer: {{session.trainer}} <br><br>
+        </h3>
+        <form action="/subscribe/{{session.id}}/" method="POST">
+            {%csrf_token%}
+        <button id="choose" type="submit">
+                Subscribe
+         </button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
+

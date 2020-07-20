@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member</title>
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.css"> -->
+     <link rel="stylesheet" type="text/css" href="/static/Dashboard.css">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<header> 
+ <div class="mainheader">
+            <div class="logo">
+                <img src="/static/Images/logo.png">
+            </div>
+            <nav>
+                <a href="/home/">home</a>
+                <a href="/contact/">contact</a>
+            </nav>
+            <div class="logoutbtn">
+                <button id="button">
+                    <a href="/signout/">Log Out</a>
+                </button>
+
+            </div>
+        </div>
+<div class="main">
+<div class="Sideplane">
+ <h3>MEMBER<br>DASHBOARD</h3>
+  <ul>
+    <!-- <li><a href="/membership/">MEMBERSHIP</a>     -->
+  <li><a href="/mprofile/">PROFILE</a>
+  <li><a href="/mclass/">CLASSES</a>
+<li><a href="/msession/">MY SESSIONS</a>
+ <li><a href="/mtrainer/">TRAINERS</a>
+  </ul>
+</div>
+<div class="content">
+{% block body %}
+<div class="box">
+    <p><br>
+    <form action="/memberDashboard/" method="POST">
+    {% csrf_token %}
+    Name :  <input type="name" name="name" required> <br><br> <hr> <br>
+    Phone No. :  <input type="number" name="phone" required> <br><br><hr><br>
+    Age : <input type="number" name="age" required> <br><br><hr> <br>
+    Gender:<select name="gender" required>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+    </select><br><br><hr> <br>
+    Height :<input type="number" name="height" required> cm<br><br><hr><br>
+    Weight :<input type="number" name="weight" required> kg<br><br><br>
+    <button type="submit">
+            Submit
+        </button>
+</form>
+</p>
+
+    </div>
+{% endblock %}
+ </div> 
+</div>
+</header>  
+</body>
+</html>

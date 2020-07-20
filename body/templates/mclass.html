@@ -1,0 +1,85 @@
+{% extends 'MemberDash.html' %}
+{% block body %}
+{% for class in classes %}
+<div class="card">
+        <img src={{class.image.url}}>
+        <h3>{{class.name}}</h3>
+        <p> </p>
+        <button id="choose">
+                <a href="/details/{{class.id}}"> View Details..</a>
+        </button>
+</div>
+{% endfor %}
+<!-- <div class="card">
+        <img src="/static/Images/cardio3.jpg">
+        <h3>Cardio</h3>
+        <p> </p>
+        <button id="choose">
+                <a href="/details/1"> View Details..</a>
+        </button>
+</div>
+
+ <div class="card">
+       <img src="/static/Images/bodybuilding.jpg">
+        <h3>Body Building</h3>
+        <p> </p>
+        <button id="choose">
+                <a href="/details/2"> View Details..</a>
+        </button>
+</div>
+       
+<div class="card">
+        <img src="/static/Images/hit1.jpg">
+        <h3>HIIT</h3>
+        <p> </p>
+        <button id="choose">
+                <a href="/details/3"> View Details..</a>  
+        </button>
+</div>
+      
+<div class="card">
+        <img src="/static/Images/calesthenics.jpg">
+        <h3>Calesthenics</h3>
+        <p> </p>
+        <button id="choose">
+               <a href="/details/4"> View Details..</a>  
+        </button>
+</div>
+      
+<div class="card">
+        <img src="/static/Images/powerlifting.jpg">
+        <h3>Powerlifting</h3>
+        <p> </p>
+        <button id="choose">
+               <a href="/details/5"> View Details..</a>  
+        </button>
+ </div>
+     
+ <div class="card">
+        <img src="/static/Images/mma.jpg">
+        <h3>MMA</h3>
+        <p> </p>
+        <button id="choose">
+                <a href="/details/6"> View Details..</a>  
+        </button>
+</div>
+       
+<div class="card">
+        <img src="/static/Images/yoga2.jpg">
+        <h3>Yoga</h3>
+        <p> </p>
+        <button id="choose">
+                <a href="/details/7"> View Details..</a>  
+        </button>
+</div>
+    
+<div class="card">
+        <img src="/static/Images/zumba2.jpg">
+        <h3>Zumba</h3>
+        <p> </p>
+        <button id="choose">
+                <a href="/details/8"> View Details..</a>  
+        </button>
+</div> -->
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'MemberDash.html' %}
+{% block body %}
+<head>
+        <style>
+                .card{
+                        height:400px;
+                        width:300px;
+                        justify-content:center;
+                        margin-left:45px;
+                }
+                .card img{
+                        margin-top: -65px;
+                }
+                
+        </style>
+</head>
+<br><br><br><br><br>
+<div class="card">
+        <img src="/static/Images/gold.jpg" style="width:150px;height:auto;padding-top:10px;border-radius:50%" alt="">
+        <h2><br>GOLD PLAN</h2><br>
+        <h3>Duration:  12 Months</h3><br>
+           
+            <h3>Price:  Rs.12,000</h3><br><br>
+            
+            <button id="choose">
+                   Select
+            </button>
+    </div>
+<div class="card">
+        <img src="/static/Images/silver.jpg" style="width:150px;height:auto;padding-top:10px;border-radius:50%" alt="">
+
+         <h2><br>SILVER PLAN</h2><br>
+         <h3>Duration:  6 Months</h3><br>
+           
+         <h3>Price:  Rs.6,000</h3><br><br>
+         <button id="choose">
+                        Select               
+                 </button>
+        </div>
+<div class="card">
+                <img src="/static/Images/bronze.jpg" style="width:150px;height:auto;padding-top:10px;border-radius:50%" alt="">
+                <h2><br>BRONZE PLAN</h2><br>
+                <h3>Duration:  3 Months</h3><br>
+           
+                <h3>Price:  Rs.6,000</h3><br><br>
+                 <button id="choose">
+                            Select                    
+                    </button>
+            </div>
+{% endblock %}

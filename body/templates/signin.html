@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+     <link rel="stylesheet" type="text/css" href="/static/BodyCult.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="modal" >
+    <div class="modal1-contents">
+        <div class="close"><a href="/home/">+</a></div>
+            <img class="Login_logo" src="/static/Images/training-icon_2.jpg" alt="">
+
+            <form action="/signin/" method="POST">
+                {% csrf_token %}
+                <div class="inputBox">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <button id="button" type="submit">
+                        Submit  
+                </button>
+           </form>
+               <br> 
+           <a href="/signup/">Signup</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- <html>
+    <head>
+        <title>Signin</title>
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/signin.css">
+    </head>
+    <body>
+        
+        <div class="d-flex justify-content-center">
+            <div class="signin-card">
+            <br>
+            <h2>Login</h2>
+            <form action="/signin/" method="POST">
+                {%csrf_token%}
+                <br>
+                <p>Enter Username</p>
+                <br>
+                <input type="username" name="username" class="form-control" required>
+                <br>
+                <p>Enter Password</p>
+                <br>
+                <input type="password" name="password" class="form-control" required>
+                <br>
+                <button type="submit" class="btn btn-md btn-success">Signin</button>
+                <br>
+                <br>
+                <a href="/signup">Signup</a>
+            </form>
+              </div>
+    </div>
+
+        
+    </body>
+</html> -->

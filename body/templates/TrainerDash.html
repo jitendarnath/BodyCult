@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trainer</title>
+     <link rel="stylesheet" type="text/css" href="/static/Dashboard.css">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<header> 
+ <div class="mainheader">
+            <div class="logo">
+                <img src="/static/Images/logo.png">
+            </div>
+            <nav>
+                <a href="/home/">home</a>
+                <a href="/contact/">contact</a>
+            </nav>
+            <div class="logoutbtn">
+                <button id="button">
+                    <a href="/signout/">Log Out</a>
+                </button>
+
+            </div>
+        </div>
+<div class="main">
+<div class="Sideplane">
+ <h3>TRAINER<br>DASHBOARD</h3>
+  <ul>
+  <li><a href="/tprofile/">PROFILE</a>
+  <li><a href="/tclass/">ADD CLASS</a>
+    <li><a href="/allclass/">MY CLASSES</a>   
+  <li><a href="/ttrainee/">TRAINEES</a>
+  </ul>
+</div>
+<div class="content">
+        {% block body %} 
+        <div class="box">
+            <p><br>
+            <form action="/trainerDashboard/" method="POST">
+            {% csrf_token %}
+            Name :  <input type="name" name="name" required> <br><br> <hr> <br>
+            Phone No. :  <input type="number" name="phone" required> <br><br><hr><br>
+            Age : <input type="number" name="age" required> <br><br><hr> <br>
+            Gender:<select name="gender" required>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select><br><br><hr> <br>
+            Experience :<input type="number" name="experience" required><br><br><hr><br>
+            Skills :<input type="textfield" name="skills" required><br><br><br>
+            <button type="submit">
+                    Submit
+                </button>
+        </form>
+        </p>
+        
+            </div>
+        {% endblock %}
+ </div>
+
+</div>
+</header>  
+</body>
+</html>

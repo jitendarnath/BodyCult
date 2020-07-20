@@ -1,0 +1,60 @@
+{% extends 'TrainerDash.html' %}
+{% block body %}
+<head>
+        <style>
+         table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 90%;
+            margin:10px 50px;
+            border:2px solid white;
+            border-radius:20px;
+            background: transparent;
+          }
+          
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            
+          }
+          th{
+            color:orangered;
+          }
+          
+          tr:nth-child(even) {
+            background-color: #dddddd;
+            color:rgba(255, 153, 0, 0.897);
+          }
+          </style>
+        </head>
+        <div class="box">
+        <form action="/edit/{{session.id}}/" method="POST">
+            {%csrf_token%}
+            <p>{{session.name}}</p>
+            <br>
+            
+            <label>Date :</label>
+            <input type="date" name="date" value="{{session.date}}" required ><br><br>
+            <label>Time :</label>
+            <input type="time" name="time" value="{{session.time}}" required><br><br>
+            <label>Duration :</label>
+            <input type="number" value="{{session.duration}}" name="duration" required> Hrs <br><br>
+            
+            <button type="submit">
+                    Edit Class
+            </button>
+       </form>
+      </div>
+
+{% endblock %}
+<!-- <select name="name"  required>
+                    <option value="1">Cardio</option>
+                    <option value="2">Body Building</option>
+                    <option value="3">HIIT</option>
+                    <option value="4">Calesthenics</option>
+                    <option value="5">Powerlifting</option>
+                    <option value="6">MMA</option>
+                    <option value="7">Yoga</option>
+                    <option value="8">Zumba</option>
+           </select><br><br> -->

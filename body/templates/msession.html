@@ -1,0 +1,59 @@
+{% extends 'MemberDash.html' %}
+{% block body %}
+<head>
+      <style>
+       table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin:10px 50px;
+          border:2px solid white;
+          border-radius:20px;
+          background: transparent;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+          
+        }
+        th{
+          color:orangered;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+          color:rgba(255, 153, 0, 0.897);
+        }
+        </style>
+</head><br>
+
+<table>
+  <tr>
+    <th>Class</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Duration(Hrs)</th>
+    <th>Trainer</th>
+    <!-- <th>Unsubscribe</th> -->
+    
+  </tr>
+
+  {% for session in sessions %}
+ <tr>
+      <td>{{session.name}}</td>
+      <td>{{session.date}}</td>
+      <td>{{session.time}}</td>
+      <td>{{session.duration}}</td>
+      <td>{{session.trainer}}</td>
+      <!-- <td><a href="/delete/{{session.id}}/">Delete</a></td> -->
+    
+      
+  </tr>
+  {% endfor %}
+
+  
+</table>
+
+{% endblock %}
