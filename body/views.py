@@ -13,6 +13,7 @@ from body.models import Profile,Trainer,Member,Session,Workout
 
 def home(request):
     return render(request,'Home.html')
+
 def contact(request):
     return render(request,'Contact.html')
 
@@ -62,7 +63,7 @@ def signin(request):
 
 def signout(request):
     logout(request)
-    return redirect("/home")
+    return redirect("/")
 
 def membership(request):
     return render(request,"membership.html")
@@ -158,12 +159,10 @@ def mprofile(request):
     member = Member.objects.get(member=request.user)
     return render(request,"mprofile.html",{"member":member})
 
-
 def allclass(request):
     trainer = Trainer.objects.get(trainer=request.user)
     sessions = Session.objects.filter(trainer=trainer)
     return render(request,"allclass.html",{"sessions":sessions})
-
 
 def subscribe(request,pk):
     if request.method =="POST":

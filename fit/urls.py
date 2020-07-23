@@ -8,6 +8,7 @@ from body.views import home,signup,signin,signout,contact,memberDashboard,member
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home),
     path('signup/', signup),
     path('signin/', signin),    
     path('signout/', signout),  
@@ -18,7 +19,6 @@ urlpatterns = [
     path('membership/', membership),
     path('mclass/',mclass),
     path('mtrainer/',mtrainer),
-    path('home/', home),
     path('contact/', contact),
     path('details/<int:pk>/', details),
     path('allclass/', allclass),
